@@ -32,7 +32,7 @@ LE = 'lifeexpectancy'
 pd.to_numeric(data[ICP], downcast=convert_param, errors='coerce')
 pd.to_numeric(data[LE], downcast=convert_param, errors='coerce')
 
-data[LE]=data['internetuserate'].replace(' ', numpy.nan)
+data[LE]=data[LE].replace(' ', numpy.nan)
 data[ICP]=data[ICP].replace(' ', numpy.nan)
 
 data_clean = data.dropna().copy(deep=True)
